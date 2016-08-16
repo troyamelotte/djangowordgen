@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>attempt number {{request.session.attempt}}</h3>
+    <h2>{{request.session.word}}</h2>
+    <form action="/generate" method="POST">
+      {% csrf_token %}
+      <input type="submit" name="Submit" value="Generate">
+    </form>
+  </body>
+</html>
